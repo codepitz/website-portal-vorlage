@@ -1,0 +1,13 @@
+{{! Karten als nummerierte Liste — wie „Warum Imagefilm“ im Entwurf }}
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen tf-schmal">
+    {{> kopf}}
+    <ol class="tf-liste-nr">
+      {{#karten}}
+      <li><span class="tf-nr">{{@nummer|zweistellig}}</span>
+        <div>{{#eyebrow}}<p class="tf-meta">{{eyebrow}}</p>{{/eyebrow}}<h3>{{titel}}</h3>{{#text}}<p>{{text|zeilen}}</p>{{/text}}
+        {{#link.zeigen}}<p><a class="ws-verweis" href="{{link.url}}">{{link.text}} →</a></p>{{/link.zeigen}}</div></li>
+      {{/karten}}
+    </ol>
+  </div>
+</section>

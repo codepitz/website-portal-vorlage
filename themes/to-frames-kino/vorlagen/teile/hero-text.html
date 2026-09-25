@@ -1,0 +1,6 @@
+<div class="tf-hero-text">
+  {{#eyebrow}}<p class="tf-eyebrow">{{eyebrow}}</p>{{/eyebrow}}
+  <h1 class="tf-hero-titel">{{#zeilen}}{{#@erste}}<span>{{.}}</span>{{/@erste}}{{^@erste}} <em>{{.}}</em>{{/@erste}}{{/zeilen}}</h1>
+  {{#lead}}<p class="tf-hero-lead">{{lead|zeilen}}</p>{{/lead}}
+  <div class="tf-knoepfe">{{knopf1|knopf}}{{knopf2|knopf2}}{{#preisZeile}}<span class="tf-preiszeile">{{preisZeile}}</span>{{/preisZeile}}</div>
+</div>

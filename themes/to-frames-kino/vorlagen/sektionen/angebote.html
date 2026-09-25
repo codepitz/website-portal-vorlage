@@ -1,0 +1,20 @@
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen">
+    {{> kopf}}
+    <div class="tf-angebote">
+      {{#angebote}}
+      <article class="tf-angebot" id="{{anker}}">
+        {{#bildUrl}}<img class="tf-angebot-bild" src="{{bildUrl}}" alt="{{bildAlt}}" loading="lazy" decoding="async">{{/bildUrl}}
+        <p class="tf-nr">{{@nummer|zweistellig}}</p>
+        <h3>{{titel}}</h3>
+        {{#kurz}}<p class="tf-angebot-kurz">{{kurz}}</p>{{/kurz}}
+        {{#text}}<p>{{text|zeilen}}</p>{{/text}}
+        {{#punkte?}}<ul class="tf-haken">{{#punkte}}<li>{{.}}</li>{{/punkte}}</ul>{{/punkte?}}
+        {{#dauer}}<p class="tf-meta">{{dauer}}</p>{{/dauer}}
+        {{#zusatz}}<p class="tf-angebot-zusatz">{{zusatz}}</p>{{/zusatz}}
+      </article>
+      {{/angebote}}
+    </div>
+    <div class="tf-knoepfe">{{knopf1|knopf}}{{knopf2|knopf2}}</div>
+  </div>
+</section>

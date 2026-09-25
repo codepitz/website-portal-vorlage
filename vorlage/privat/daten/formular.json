@@ -1,0 +1,21 @@
+{
+    "modus": "server",
+    "empfaenger": "",
+    "absender": "",
+    "betreff": "Anfrage über die Webseite",
+    "ueberschrift": "Schreiben Sie uns",
+    "hinweis": "Felder mit * sind Pflichtfelder. Wir melden uns in der Regel innerhalb eines Werktags.",
+    "nachrichtPlatzhalter": "Worum geht es? Gern auch mit Wunschtermin.",
+    "auswahlLabel": "Worum geht es?",
+    "beratungLabel": "Etwas anderes / Beratung",
+    "zeiten": [
+        "Vormittags",
+        "Nachmittags",
+        "Egal"
+    ],
+    "einwilligung": "Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden.",
+    "einwilligungZusatz": "Details in unserer Datenschutzerklärung.",
+    "knopfText": "Anfrage senden",
+    "erfolgTitel": "Vielen Dank!",
+    "erfolgText": "Ihre Anfrage ist bei uns angekommen. Wir melden uns so bald wie möglich."
+}

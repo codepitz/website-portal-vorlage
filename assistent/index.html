@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0e16">
+<meta name="robots" content="noindex">
+<title>Portal-Assistent</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0e16'/%3E%3Crect x='16' y='16' width='32' height='32' rx='9' fill='none' stroke='%235eead4' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%235eead4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/aurora.css">
+</head>
+<body>
+<header class="kopf" id="kopf">
+  <div class="kopf-innen">
+    <div class="kopf-marke">
+      <span class="kopf-zeichen" aria-hidden="true">◈</span>
+      <span class="kopf-titel">Portal-Assistent <span class="kopf-zusatz" id="kopf-zusatz">Webseite mit Adminportal erstellen</span></span>
+    </div>
+    <div class="phasen" id="phasen" aria-label="Abschnitte">
+      <span data-phase="entwicklung">① <span class="lang">Entwicklung</span></span>
+      <span data-phase="anleitung">② <span class="lang">Implementierung</span></span>
+    </div>
+  </div>
+  <div class="fortschritt" id="fortschritt" hidden>
+    <div class="fortschritt-leiste" role="progressbar" aria-valuemin="0" aria-valuemax="100"><i id="fortschritt-balken"></i></div>
+    <span class="fortschritt-zahl" id="fortschritt-zahl"></span>
+  </div>
+</header>
+
+<main class="view" id="view" tabindex="-1"></main>
+
+<nav class="leiste" id="leiste" aria-label="Weiter und zurück">
+  <div class="leiste-innen" id="leiste-innen"></div>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="projektdatei" accept=".json,application/json" hidden>
+
+<script src="assets/vorlage.js"></script>
+<script src="assets/daten.js"></script>
+<script src="assets/zip.js"></script>
+<script src="assets/erzeugen.js"></script>
+<script src="assets/bilder.js"></script>
+<script src="assets/anleitung.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

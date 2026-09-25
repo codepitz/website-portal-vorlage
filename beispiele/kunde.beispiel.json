@@ -1,0 +1,43 @@
+{
+    "branche": "dienstleistung",
+    "name": "Muster Film",
+    "claim": "Dein Image. In Szene gesetzt.",
+    "beschreibung": "Imagefilme für Betriebe in der Region — vom Erstgespräch bis zum fertigen Schnitt.",
+    "organisation": "Studio",
+    "strasse": "Musterstraße 1",
+    "plz": "31134",
+    "ort": "Hildesheim",
+    "telefon": "05121 123456",
+    "telefonLink": "+495121123456",
+    "email": "anfrage@muster-film.de",
+    "inhaber": "Max Mustermann",
+    "rechtsform": "Einzelunternehmen",
+    "ustid": "",
+    "verantwortlich": "Max Mustermann, Anschrift wie oben",
+    "hoster": "strato",
+    "domain": "muster-film.de",
+    "www": true,
+    "sub": "portal",
+    "postfaecher": [
+        { "name": "anfrage", "zweck": "Empfang: Anfragen" },
+        { "name": "webseite", "zweck": "Absender des Kontaktformulars" }
+    ],
+    "empfaenger": "anfrage",
+    "absender": "webseite",
+    "modus": "server",
+    "module": { "angebote": true, "team": true, "preise": true, "zeiten": false, "formular": true, "hinweise": true, "barrierefreiheit": true },
+    "begriffe": { "angebote": "Pakete", "angebot": "Paket", "team": "Team", "person": "Person" },
+    "sektionen": ["hero", "ueber-uns", "angebote", "schritte", "stimmen", "faq", "kontakt"],
+    "heroZeilen": ["Ein Film, der dein Image", "in Szene setzt."],
+    "lead": "Vom ersten Gespräch bis zum fertigen Schnitt — ein Drehtag, dein Film, alle Anfahrten inklusive.",
+    "knopf": "Paket anfragen",
+    "angeboteListe": [
+        ["Imagefilm-Paket", "Drehtag, Interview, Film bis 4 Minuten"],
+        ["Social-Clips", "Kurze Hochkant-Schnitte für Reels"],
+        ["Fotografie", "Porträts und Szenen vom Drehtag"]
+    ],
+    "seoTitel": "Muster Film – Imagefilme in Hildesheim",
+    "seoBeschreibung": "Imagefilme für Betriebe in der Region Hildesheim — komplett aus einer Hand.",
+    "adminBenutzer": "max",
+    "adminAnzeige": "Max Mustermann"
+}

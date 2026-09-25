@@ -1,0 +1,166 @@
+{
+    "_hinweis": "Allgemeine Vorlage — keine Rechtsberatung. Bitte vor der Veröffentlichung prüfen (lassen). Angaben in geschweiften Klammern füllt der Generator aus den Stammdaten. Absätze mit LUECKE: erscheinen als offener Punkt, LINK: Beschriftung | ziel wird zum Verweis.",
+    "impressum": {
+        "titel": "Impressum",
+        "stand": "",
+        "abschnitte": [
+            {
+                "titel": "Angaben gemäß § 5 DDG",
+                "absaetze": [
+                    "{name}\n{inhaber}\n{anschrift}",
+                    "Rechtsform: {rechtsform}\nVertreten durch: {vertreten}\n{register}"
+                ]
+            },
+            {
+                "titel": "Kontakt",
+                "absaetze": [
+                    "Telefon: {telefon}\nTelefax: {fax}\nE-Mail: {email}"
+                ]
+            },
+            {
+                "titel": "Umsatzsteuer",
+                "absaetze": [
+                    "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {ustid}"
+                ]
+            },
+            {
+                "titel": "Berufsrechtliche Angaben",
+                "absaetze": [
+                    "Berufsbezeichnung: {berufsbezeichnung}\nVerliehen in: {verliehenIn}\nKammer: {kammer}",
+                    "Zuständige Aufsichtsbehörde: {aufsichtsbehoerde}",
+                    "Berufsrechtliche Regelungen: {berufsrecht}"
+                ]
+            },
+            {
+                "titel": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+                "absaetze": [
+                    "{verantwortlich}\n{anschrift}"
+                ]
+            },
+            {
+                "titel": "Verbraucherstreitbeilegung",
+                "absaetze": [
+                    "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+                ]
+            },
+            {
+                "titel": "Haftung für Inhalte",
+                "absaetze": [
+                    "Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+                    "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen."
+                ]
+            },
+            {
+                "titel": "Haftung für Links",
+                "absaetze": [
+                    "Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links umgehend."
+                ]
+            },
+            {
+                "titel": "Urheberrecht und Bildnachweise",
+                "absaetze": [
+                    "Die Inhalte und Werke auf dieser Webseite unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.",
+                    "LUECKE: Bildnachweise ergänzen, sobald Fotos eingesetzt sind (z. B. „Fotos: eigene Aufnahmen“ oder Name der Fotografin/des Fotografen)."
+                ]
+            }
+        ]
+    },
+    "datenschutz": {
+        "titel": "Datenschutzerklärung",
+        "stand": "Stand: September 2026",
+        "abschnitte": [
+            {
+                "titel": "1. Verantwortliche Stelle",
+                "absaetze": [
+                    "Verantwortlich für die Datenverarbeitung auf dieser Webseite ist:",
+                    "{name}\n{inhaber}\n{anschrift}",
+                    "Telefon: {telefon}\nE-Mail: {email}"
+                ]
+            },
+            {
+                "titel": "2. Das Wichtigste in Kürze",
+                "absaetze": [
+                    "Diese Webseite setzt keine Cookies, verwendet keine Analyse- oder Tracking-Werkzeuge und bindet keine Inhalte fremder Anbieter ein. Schriften, Bilder, Videos und Skripte werden ausschließlich von unserem eigenen Webserver geladen.",
+                    "Personenbezogene Daten verarbeiten wir nur, soweit dies für den Betrieb der Webseite oder die Bearbeitung Ihrer Anfrage erforderlich ist."
+                ]
+            },
+            {
+                "titel": "3. Hosting und Server-Logdateien",
+                "absaetze": [
+                    "Diese Webseite wird bei folgendem Anbieter betrieben: {hoster}",
+                    "Beim Aufruf der Webseite speichert der Webserver automatisch Informationen, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene Seite, übertragene Datenmenge, Referrer-URL sowie Browser und Betriebssystem. Diese Daten sind technisch erforderlich, um die Webseite auszuliefern und ihre Sicherheit zu gewährleisten.",
+                    "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.",
+                    "LUECKE: Speicherdauer der Server-Logdateien beim Hosting-Anbieter erfragen und hier eintragen (üblich sind 7 bis 14 Tage)."
+                ]
+            },
+            {
+                "titel": "4. Kontakt per Telefon, E-Mail und Formular",
+                "absaetze": [
+                    "Wenn Sie uns anrufen, eine E-Mail schreiben oder das Kontaktformular nutzen, verarbeiten wir Ihre Angaben (z. B. Name, Telefonnummer, E-Mail-Adresse und Ihre Nachricht), um Ihre Anfrage zu beantworten.",
+                    "Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung eines Vertrags) sowie Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO, die Sie jederzeit mit Wirkung für die Zukunft widerrufen können.",
+                    "Anfragen über das Formular werden per E-Mail an uns übermittelt und nicht dauerhaft auf dem Webserver gespeichert. Wir löschen Ihre Angaben, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen."
+                ]
+            },
+            {
+                "titel": "5. Hinweise auf der Webseite",
+                "absaetze": [
+                    "Blenden wir einen Hinweis ein (z. B. zu Urlaubszeiten) und Sie schließen ihn, merkt sich Ihr Browser das im lokalen Speicher (localStorage), damit der Hinweis nicht erneut erscheint. Diese Information verlässt Ihr Gerät nicht. Sie können sie jederzeit über die Einstellungen Ihres Browsers löschen.",
+                    "Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG in Verbindung mit Art. 6 Abs. 1 lit. f DSGVO."
+                ]
+            },
+            {
+                "titel": "6. Kartendienst",
+                "absaetze": [
+                    "Unsere Anschrift ist mit einem Link zu Google Maps versehen. Erst wenn Sie diesen Link anklicken oder die Karte auf der Seite ausdrücklich laden, werden Daten (insbesondere Ihre IP-Adresse) an Google übertragen; dort gelten die Datenschutzbestimmungen von Google. Beim bloßen Besuch unserer Webseite werden keine Daten an Google übertragen."
+                ]
+            },
+            {
+                "titel": "7. Ihre Rechte",
+                "absaetze": [
+                    "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie auf Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21 DSGVO).",
+                    "Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).",
+                    "Für alle Fragen zum Datenschutz erreichen Sie uns unter {email}."
+                ]
+            },
+            {
+                "titel": "8. Verschlüsselung",
+                "absaetze": [
+                    "Diese Webseite nutzt aus Sicherheitsgründen eine TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an „https://“ in der Adresszeile Ihres Browsers."
+                ]
+            }
+        ]
+    },
+    "barrierefreiheit": {
+        "titel": "Erklärung zur Barrierefreiheit",
+        "stand": "Stand: September 2026",
+        "abschnitte": [
+            {
+                "titel": "Unser Anspruch",
+                "absaetze": [
+                    "Wir möchten, dass alle Menschen unsere Webseite gut nutzen können – unabhängig von Alter, Sehvermögen oder den Hilfsmitteln, die sie verwenden."
+                ]
+            },
+            {
+                "titel": "Was wir dafür tun",
+                "absaetze": [
+                    "Ausreichende Farbkontraste und gut lesbare Schriftgrößen.",
+                    "Alle Funktionen sind mit der Tastatur bedienbar; Fokus-Markierungen sind sichtbar.",
+                    "Ist in Ihrem System „Bewegung reduzieren“ eingestellt, verzichtet die Seite auf Animationen.",
+                    "Bilder erhalten beschreibende Alternativtexte."
+                ]
+            },
+            {
+                "titel": "Bekannte Einschränkungen",
+                "absaetze": [
+                    "Einzelne Inhalte können noch nicht vollständig barrierefrei sein. Wir arbeiten laufend daran."
+                ]
+            },
+            {
+                "titel": "Feedback und Kontakt",
+                "absaetze": [
+                    "Ist Ihnen eine Barriere aufgefallen? Dann sagen Sie es uns bitte: telefonisch unter {telefon} oder per E-Mail an {email}."
+                ]
+            }
+        ]
+    }
+}

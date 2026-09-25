@@ -1,0 +1,11 @@
+{{! Eigener Sektionstyp dieses Themes: ein Preis, zentriert }}
+<section class="{{{klasseHtml}}} tf-sektion tf-mitte"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen tf-schmal">
+    {{#eyebrow}}<p class="tf-eyebrow">{{eyebrow}}</p>{{/eyebrow}}
+    {{#titel}}<h2 class="tf-titel">{{titel|zeilen}}</h2>{{/titel}}
+    {{#preis}}<p class="tf-preis">{{preis}}</p>{{/preis}}
+    {{#text}}<p class="tf-lead">{{text|zeilen}}</p>{{/text}}
+    <div class="tf-knoepfe">{{knopf|knopf}}</div>
+    {{#fussnote}}<p class="tf-meta">{{fussnote}}</p>{{/fussnote}}
+  </div>
+</section>

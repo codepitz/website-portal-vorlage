@@ -1,0 +1,16 @@
+{{! Kopfbereich mit Paket-Karte rechts — Inhalte der Karte unter „Zusätzlich im Design“ }}
+<section class="{{{klasseHtml}}} tf-hero tf-hero--karte tf-hero--{{medium}}"{{{ankerAttrHtml}}}>
+  {{> hero-hintergrund}}
+  <div class="ws-rahmen tf-hero-raster">
+    {{> hero-text}}
+    {{#karte.preis}}
+    <aside class="tf-karte" aria-label="{{karte.eyebrow}}">
+      <div class="tf-karte-kopf">{{#karte.eyebrow}}<p class="tf-karte-eyebrow">{{karte.eyebrow}}</p>{{/karte.eyebrow}}{{#karte.badge}}<span class="tf-badge">{{karte.badge}}</span>{{/karte.badge}}</div>
+      <p class="tf-karte-preis">{{karte.preis}}</p>
+      {{#karte.hinweis}}<p class="tf-karte-hinweis">{{karte.hinweis}}</p>{{/karte.hinweis}}
+      {{#karte.punkte?}}<ul class="tf-haken">{{#karte.punkte}}<li>{{.}}</li>{{/karte.punkte}}</ul>{{/karte.punkte?}}
+      {{karte.knopf|knopf2}}
+    </aside>
+    {{/karte.preis}}
+  </div>
+</section>

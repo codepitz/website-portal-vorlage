@@ -1,0 +1,10 @@
+# Laufzeitdaten des Portals — liegen nur auf dem Server
+portal/konfig.php
+privat/ablage/
+privat/entwurf/
+privat/sicherung/
+
+# Lokale Reste
+.DS_Store
+._*
+*.tmp*

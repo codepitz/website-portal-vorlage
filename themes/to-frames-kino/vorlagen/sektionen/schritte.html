@@ -1,0 +1,8 @@
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen tf-schmal">
+    {{> kopf}}
+    <ol class="tf-liste-nr">
+      {{#schritte}}<li><span class="tf-nr">{{@nummer|zweistellig}}</span><div><h3>{{titel}}</h3>{{#text}}<p>{{text|zeilen}}</p>{{/text}}</div></li>{{/schritte}}
+    </ol>
+  </div>
+</section>

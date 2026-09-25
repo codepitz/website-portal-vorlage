@@ -1,0 +1,33 @@
+{
+    "name": "Aurora Hell",
+    "beschreibung": "Die helle Schwester von Aurora: fast weiße Flächen, dunkles Türkis als Akzent, der Verlauf nur als Hauch.",
+    "quelle": "Vorlage",
+    "schutz": true,
+    "tokens": {
+        "bg": "#f6f6fb",
+        "surface": "#ffffff",
+        "surface-2": "#eeeef6",
+        "line": "#dedee9",
+        "text": "#16161f",
+        "text-2": "#55556b",
+        "muted": "#80809a",
+        "accent": "#0f8f7c",
+        "accent-ink": "#ffffff",
+        "ok": "#059669",
+        "danger": "#e11d48",
+        "aurora": true,
+        "aurora-1": "#34d399",
+        "aurora-2": "#8b5cf6",
+        "aurora-3": "#38bdf8",
+        "aurora-staerke": 12,
+        "font-body": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "font-head": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "head-weight": 600,
+        "text-size": 17,
+        "radius": "16px",
+        "radius-sm": "12px",
+        "maxw": "1120px",
+        "modus": "hell"
+    },
+    "fonts": []
+}

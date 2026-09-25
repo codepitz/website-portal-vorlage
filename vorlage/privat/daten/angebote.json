@@ -1,0 +1,41 @@
+[
+    {
+        "aktiv": true,
+        "titel": "Erstes Angebot",
+        "kurz": "Eine Zeile, worum es geht",
+        "text": "Hier beschreiben Sie in zwei, drei Sätzen, was Kundinnen und Kunden erwartet.",
+        "punkte": [
+            "Geeignet für …",
+            "Enthalten ist …"
+        ],
+        "dauer": "",
+        "zusatz": "ab 49 €",
+        "bild": "",
+        "bildAlt": "",
+        "id": "erstes-angebot"
+    },
+    {
+        "aktiv": true,
+        "titel": "Zweites Angebot",
+        "kurz": "Eine Zeile, worum es geht",
+        "text": "Hier beschreiben Sie in zwei, drei Sätzen, was Kundinnen und Kunden erwartet.",
+        "punkte": [],
+        "dauer": "",
+        "zusatz": "auf Anfrage",
+        "bild": "",
+        "bildAlt": "",
+        "id": "zweites-angebot"
+    },
+    {
+        "aktiv": true,
+        "titel": "Drittes Angebot",
+        "kurz": "Eine Zeile, worum es geht",
+        "text": "Hier beschreiben Sie in zwei, drei Sätzen, was Kundinnen und Kunden erwartet.",
+        "punkte": [],
+        "dauer": "",
+        "zusatz": "",
+        "bild": "",
+        "bildAlt": "",
+        "id": "drittes-angebot"
+    }
+]

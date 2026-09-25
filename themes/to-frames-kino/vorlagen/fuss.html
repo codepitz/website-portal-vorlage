@@ -1,0 +1,16 @@
+<footer class="tf-fuss">
+  <div class="ws-rahmen">
+    <div class="tf-fuss-oben">
+      <div>{{{markeHtml}}}{{#fussText}}<p class="tf-meta">{{fussText}}</p>{{/fussText}}</div>
+      <div class="tf-fuss-kontakt">
+        {{#firma.anschriftHtml}}<p>{{{firma.anschriftHtml}}}</p>{{/firma.anschriftHtml}}
+        {{#firma.emailUrl}}<p><a href="{{firma.emailUrl}}">{{firma.kontakt.email}}</a></p>{{/firma.emailUrl}}
+        {{#firma.telefonUrl}}<p><a href="{{firma.telefonUrl}}">{{firma.kontakt.telefon}}</a></p>{{/firma.telefonUrl}}
+      </div>
+    </div>
+    <div class="tf-fuss-unten">
+      <p>© {{jahr}} {{firma.name}}</p>
+      <nav aria-label="Rechtliches und Profile">{{#social}}<a href="{{url}}" target="_blank" rel="noopener">{{titel}}</a>{{/social}}{{#recht}}<a href="{{url}}">{{label}}</a>{{/recht}}</nav>
+    </div>
+  </div>
+</footer>

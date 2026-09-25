@@ -1,0 +1,43 @@
+{
+    "hervorgehoben": [
+        {
+            "eyebrow": "Einstieg",
+            "titel": "Basis",
+            "preis": "49 €",
+            "variante": "standard",
+            "detail": "Kurz erklärt, was enthalten ist."
+        },
+        {
+            "eyebrow": "Am häufigsten gewählt",
+            "titel": "Komfort",
+            "preis": "89 €",
+            "variante": "akzent",
+            "detail": "Kurz erklärt, was enthalten ist."
+        },
+        {
+            "eyebrow": "Individuell",
+            "titel": "Nach Maß",
+            "preis": "auf Anfrage",
+            "variante": "umriss",
+            "detail": "Wir erstellen Ihnen ein Angebot."
+        }
+    ],
+    "gruppen": [
+        {
+            "titel": "Preisliste",
+            "positionen": [
+                {
+                    "name": "Position eins",
+                    "meta": "",
+                    "preis": "25 €"
+                },
+                {
+                    "name": "Position zwei",
+                    "meta": "je Stunde",
+                    "preis": "60 €"
+                }
+            ]
+        }
+    ],
+    "hinweis": "Alle Preise inklusive gesetzlicher Mehrwertsteuer."
+}

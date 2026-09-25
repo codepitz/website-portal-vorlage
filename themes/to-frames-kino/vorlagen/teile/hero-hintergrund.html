@@ -1,0 +1,4 @@
+<div class="tf-hero-licht" aria-hidden="true"></div>
+{{#medium=bild}}{{#bildUrl}}<div class="tf-hero-medium"><img src="{{bildUrl}}" alt="" loading="eager" decoding="async"></div>{{/bildUrl}}{{/medium=bild}}
+{{#medium=video}}{{#videoUrl}}<div class="tf-hero-medium"><video src="{{videoUrl}}"{{#bildUrl}} poster="{{bildUrl}}"{{/bildUrl}} autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
+<button type="button" class="ws-hero-pause tf-hero-pause" data-video-pause aria-label="Hintergrundvideo anhalten">❚❚</button>{{/videoUrl}}{{/medium=video}}

@@ -1,0 +1,41 @@
+# Portal — Docroot der Portal-Subdomain (z. B. portal.ihre-domain.de)
+#
+# Der Ordner enthält ausführbaren Code und die Konfiguration. Was hier steht,
+# verhindert, dass davon etwas im Klartext ausgeliefert wird.
+
+# HTTPS erzwingen — ohne das ginge das Passwort im Klartext über die Leitung.
+# ACHTUNG: Erst hochladen, wenn für die Subdomain ein SSL-Zertifikat aktiv ist.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# Die Vorschau arbeitet mit vorschau.php/pfad/zur/datei
+AcceptPathInfo On
+
+<FilesMatch "^(konfig\.php|konfig\.beispiel\.php)$">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 404 ^/(lib|ansichten|werkzeuge)(/|$)
+RedirectMatch 404 /\.(git|env|DS_Store)
+RedirectMatch 404 /\._
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "same-origin"
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+</IfModule>
+
+<IfModule mod_php.c>
+  php_value upload_max_filesize 100M
+  php_value post_max_size 110M
+  php_value memory_limit 256M
+</IfModule>
+
+DirectoryIndex index.php

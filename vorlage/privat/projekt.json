@@ -1,0 +1,35 @@
+{
+    "_hinweis": "Vom Assistenten geschrieben. Legt fest, wie Portal und Webseite heißen, welche Module es gibt und wie Bereiche benannt sind.",
+    "name": "Muster & Co.",
+    "portal": "Muster Portal",
+    "kuerzel": "M",
+    "organisation": "Betrieb",
+    "branche": "allgemein",
+    "zeitzone": "Europe/Berlin",
+    "reglementiert": false,
+    "sitzungsdauer": 120,
+    "module": {
+        "angebote": true,
+        "team": true,
+        "preise": true,
+        "zeiten": true,
+        "formular": true,
+        "hinweise": true,
+        "barrierefreiheit": true
+    },
+    "begriffe": {
+        "angebote": "Leistungen",
+        "angebot": "Leistung",
+        "team": "Team",
+        "person": "Person",
+        "zeiten": "Öffnungszeiten",
+        "hinweise": "Hinweise & Urlaub",
+        "anfrage": "Anfrage"
+    },
+    "hoster": {
+        "name": "STRATO",
+        "smtp": "smtp.strato.de",
+        "port": 465
+    },
+    "erstellt": ""
+}

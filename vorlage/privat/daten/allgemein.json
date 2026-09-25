@@ -1,0 +1,23 @@
+{
+    "domain": "https://www.example.de",
+    "design": "aurora",
+    "seo": {
+        "titel": "Muster & Co. – Ihr Betrieb in Musterstadt",
+        "beschreibung": "Muster & Co. in Musterstadt: kurz beschrieben, was wir anbieten und warum es sich lohnt, uns anzurufen.",
+        "bild": "",
+        "indexieren": false
+    },
+    "kopf": {
+        "logo": "",
+        "logoAlt": "",
+        "anzeige": "logo",
+        "logoGroesse": "mittel",
+        "knopfText": "Kontakt",
+        "knopfZiel": "#kontakt",
+        "links": []
+    },
+    "fuss": {
+        "text": "",
+        "angeboteZeigen": true
+    }
+}

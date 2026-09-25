@@ -1,0 +1,10 @@
+{{! Eigener Sektionstyp dieses Themes: zweispaltige Liste mit Häkchen }}
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen">
+    {{> kopf}}
+    <ul class="tf-check">
+      {{#punkte}}<li><h3>{{titel}}</h3>{{#text}}<p>{{text|zeilen}}</p>{{/text}}</li>{{/punkte}}
+    </ul>
+    {{#extra.titel}}<p class="tf-extra">{{#extra.label}}<span class="tf-badge">{{extra.label}}</span>{{/extra.label}}<strong>{{extra.titel}}</strong>{{#extra.text}} — {{extra.text}}{{/extra.text}}</p>{{/extra.titel}}
+  </div>
+</section>

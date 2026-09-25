@@ -1,0 +1,31 @@
+{
+    "_hinweis": "Stammdaten — gepflegt im Portal unter „… & Kontakt“. Die Angaben unter „recht“ setzt der Generator in Impressum und Datenschutz ein.",
+    "name": "Muster & Co.",
+    "claim": "Ihr Betrieb in Musterstadt",
+    "beschreibung": "Kurz und klar: was wir tun, für wen und wo.",
+    "kontakt": {
+        "strasse": "Musterstraße 1",
+        "plz": "12345",
+        "ort": "Musterstadt",
+        "telefon": "0123 456 78 90",
+        "telefonLink": "+491234567890",
+        "fax": "",
+        "email": "info@example.de"
+    },
+    "karte": true,
+    "social": [],
+    "recht": {
+        "inhaber": "",
+        "rechtsform": "",
+        "vertreten": "",
+        "register": "",
+        "ustid": "",
+        "berufsbezeichnung": "",
+        "verliehenIn": "",
+        "kammer": "",
+        "aufsichtsbehoerde": "",
+        "berufsrecht": "",
+        "verantwortlich": "",
+        "hoster": ""
+    }
+}

@@ -1,0 +1,14 @@
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen tf-kontakt">
+    <div>
+      {{> kopf}}
+      <dl class="tf-kontaktdaten">
+        {{#firma.anschriftHtml}}<div><dt>Anschrift</dt><dd>{{{firma.anschriftHtml}}}{{#firma.mapsUrl}}<br><a href="{{firma.mapsUrl}}" target="_blank" rel="noopener">Route planen →</a>{{/firma.mapsUrl}}</dd></div>{{/firma.anschriftHtml}}
+        {{#firma.telefonUrl}}<div><dt>Telefon</dt><dd><a href="{{firma.telefonUrl}}">{{firma.kontakt.telefon}}</a></dd></div>{{/firma.telefonUrl}}
+        {{#firma.emailUrl}}<div><dt>E-Mail</dt><dd><a href="{{firma.emailUrl}}">{{firma.kontakt.email}}</a></dd></div>{{/firma.emailUrl}}
+      </dl>
+      {{#zeitenHtml}}<div class="tf-zeiten" id="zeiten"><p class="tf-eyebrow">{{begriffe.zeiten}}</p>{{{zeitenHtml}}}</div>{{/zeitenHtml}}
+    </div>
+    <div class="tf-formular">{{{formularHtml}}}</div>
+  </div>
+</section>

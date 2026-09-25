@@ -1,0 +1,223 @@
+{
+    "sektionen": [
+        {
+            "id": "s-00000001",
+            "typ": "hero",
+            "aktiv": true,
+            "anker": "top",
+            "menue": {
+                "zeigen": false,
+                "label": ""
+            },
+            "eyebrow": "Muster & Co. · Musterstadt",
+            "zeilen": [
+                "Eine klare Botschaft,",
+                "die hängen bleibt."
+            ],
+            "lead": "Ein, zwei Sätze, die sagen, was Sie tun und für wen. Alles Weitere steht weiter unten.",
+            "knopf1": {
+                "text": "Kontakt aufnehmen",
+                "ziel": "#kontakt"
+            },
+            "knopf2": {
+                "text": "Unsere Leistungen",
+                "ziel": "#leistungen"
+            },
+            "medium": "verlauf",
+            "video": "",
+            "bild": "",
+            "abdunkeln": 40,
+            "news": {
+                "zeigen": false,
+                "eyebrow": "",
+                "titel": "",
+                "ziel": ""
+            }
+        },
+        {
+            "id": "s-00000002",
+            "typ": "ueber-uns",
+            "aktiv": true,
+            "anker": "ueber-uns",
+            "menue": {
+                "zeigen": true,
+                "label": "Über uns"
+            },
+            "farbe": "standard",
+            "eyebrow": "Über uns",
+            "statement": "Wir machen das seit Jahren — gründlich, freundlich und mit Zeit für Ihre Fragen.",
+            "absaetze": [
+                "Hier erzählen Sie in wenigen Sätzen, wer Sie sind und was Sie ausmacht."
+            ],
+            "bild": "",
+            "bildAlt": "",
+            "werte": [
+                {
+                    "titel": "Erfahrung",
+                    "text": "Seit vielen Jahren vor Ort."
+                },
+                {
+                    "titel": "Sorgfalt",
+                    "text": "Gründlich statt schnell."
+                },
+                {
+                    "titel": "Nähe",
+                    "text": "Kurze Wege, klare Absprachen."
+                }
+            ],
+            "knopf": {
+                "text": "",
+                "ziel": ""
+            }
+        },
+        {
+            "id": "s-00000003",
+            "typ": "angebote",
+            "aktiv": true,
+            "anker": "leistungen",
+            "menue": {
+                "zeigen": true,
+                "label": "Leistungen"
+            },
+            "farbe": "flaeche",
+            "eyebrow": "Leistungen",
+            "titel": "Was wir",
+            "titelLeise": "für Sie tun.",
+            "lead": "",
+            "darstellung": "karten",
+            "knopf1": {
+                "text": "Kontakt aufnehmen",
+                "ziel": "#kontakt"
+            },
+            "knopf2": {
+                "text": "",
+                "ziel": ""
+            }
+        },
+        {
+            "id": "s-00000004",
+            "typ": "schritte",
+            "aktiv": true,
+            "anker": "ablauf",
+            "menue": {
+                "zeigen": false,
+                "label": ""
+            },
+            "farbe": "standard",
+            "eyebrow": "Ablauf",
+            "titel": "So läuft es",
+            "titelLeise": "ab.",
+            "lead": "",
+            "schritte": [
+                {
+                    "titel": "Kontakt aufnehmen",
+                    "text": "Telefonisch oder über das Formular."
+                },
+                {
+                    "titel": "Beratung",
+                    "text": "Wir besprechen in Ruhe, was Sie brauchen."
+                },
+                {
+                    "titel": "Umsetzung",
+                    "text": "Gründlich, pünktlich und mit Zeit für Fragen."
+                }
+            ]
+        },
+        {
+            "id": "s-00000005",
+            "typ": "team",
+            "aktiv": true,
+            "anker": "team",
+            "menue": {
+                "zeigen": true,
+                "label": "Team"
+            },
+            "farbe": "flaeche",
+            "eyebrow": "Team",
+            "titel": "Menschen, die",
+            "titelLeise": "zuhören.",
+            "lead": ""
+        },
+        {
+            "id": "s-00000006",
+            "typ": "preise",
+            "aktiv": true,
+            "anker": "preise",
+            "menue": {
+                "zeigen": true,
+                "label": "Preise"
+            },
+            "farbe": "standard",
+            "eyebrow": "Preise",
+            "titel": "Klar und",
+            "titelLeise": "transparent.",
+            "lead": "",
+            "knopf": {
+                "text": "Kontakt aufnehmen",
+                "ziel": "#kontakt"
+            }
+        },
+        {
+            "id": "s-00000007",
+            "typ": "faq",
+            "aktiv": true,
+            "anker": "fragen",
+            "menue": {
+                "zeigen": false,
+                "label": ""
+            },
+            "farbe": "flaeche",
+            "eyebrow": "Gut zu wissen",
+            "titel": "Häufige",
+            "titelLeise": "Fragen.",
+            "fragen": [
+                {
+                    "frage": "Wie schnell bekomme ich einen Termin?",
+                    "antwort": "In der Regel innerhalb einer Woche. Rufen Sie uns einfach an."
+                },
+                {
+                    "frage": "Welche Zahlungsarten gibt es?",
+                    "antwort": "Bar, EC-Karte und Überweisung."
+                }
+            ]
+        },
+        {
+            "id": "s-00000008",
+            "typ": "kontakt",
+            "aktiv": true,
+            "anker": "kontakt",
+            "menue": {
+                "zeigen": true,
+                "label": "Kontakt"
+            },
+            "farbe": "standard",
+            "eyebrow": "Kontakt",
+            "titel": "Wir freuen uns",
+            "titelLeise": "auf Sie.",
+            "lead": "",
+            "zeitenMenue": {
+                "zeigen": true,
+                "label": ""
+            }
+        },
+        {
+            "id": "s-00000009",
+            "typ": "anfahrt",
+            "aktiv": false,
+            "anker": "anfahrt",
+            "menue": {
+                "zeigen": false,
+                "label": ""
+            },
+            "farbe": "flaeche",
+            "eyebrow": "Anfahrt",
+            "titel": "So finden Sie",
+            "titelLeise": "zu uns.",
+            "lead": "Auf der Karte sehen Sie den genauen Standort.",
+            "adresse": "",
+            "zoom": 16,
+            "laden": "klick",
+            "punkte": []
+        }
+    ]
+}

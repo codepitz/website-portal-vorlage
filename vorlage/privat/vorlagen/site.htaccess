@@ -1,0 +1,61 @@
+# Vom Website-Generator angelegt — Vorlage: privat/vorlagen/site.htaccess
+#
+# Diese Datei liegt im Docroot der Webseite und wird bei jedem
+# „Veröffentlichen“ neu geschrieben. Änderungen gehören deshalb in die
+# Vorlage (privat/vorlagen/site.htaccess), nicht hierher.
+
+# --- HTTPS erzwingen ---------------------------------------------------------
+# Ohne das wären Formularangaben auf dem Weg zum Server lesbar.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# --- Grundeinstellungen ------------------------------------------------------
+# Ohne AddDefaultCharset liefert Apache Umlaute als ISO-8859-1 aus.
+AddDefaultCharset UTF-8
+DirectoryIndex index.html index.php
+Options -Indexes
+
+# Nichts Verstecktes ausliefern: Versionsdaten, Zugangsdaten, macOS-Reste.
+RedirectMatch 404 /\.(git|env|DS_Store)
+RedirectMatch 404 /\._
+
+# Diese Datei selbst und die Sicherung .htaccess-vorher gehen niemanden etwas an.
+# (Die meisten Server sperren .ht* schon in der Grundeinstellung — nicht alle.)
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  # --- Sicherheits-Kopfzeilen ------------------------------------------------
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+  # Alles, was die Seite lädt, kommt von der eigenen Domain. Einzige Ausnahme:
+  # „frame-src“ erlaubt die Karte in der Sektion „Anfahrt“. Ohne diese Angabe
+  # blockt der Browser den Kartenrahmen und das Feld bleibt leer. Geladen wird
+  # die Karte trotzdem erst, wenn Besucher darauf klicken.
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-src https://www.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
+
+  # --- Zwischenspeicher der Browser ------------------------------------------
+  # Dateien in assets/ tragen eine Prüfsumme im Namen: Ändert sich etwas,
+  # ändert sich der Name. Sie dürfen deshalb dauerhaft liegen bleiben.
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Seiten und Inhalt dagegen immer frisch holen — sonst lesen Besucher nach
+  # dem Veröffentlichen noch tagelang die alten Texte.
+  <FilesMatch "\.(html|json|xml)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Bilder und Videos bekommen beim Einbinden eine Versionskennung (?v=…),
+  # ein ausgetauschtes Foto erscheint also trotz Zwischenspeicher sofort.
+  <FilesMatch "\.(jpg|jpeg|png|webp|avif|gif|svg|ico|mp4|webm|pdf)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>

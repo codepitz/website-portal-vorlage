@@ -1,0 +1,10 @@
+<header class="ws-kopfleiste tf-kopf" data-kopf>
+  <div class="ws-kopfleiste-innen">
+    {{{markeHtml}}}
+    {{#menueHtml}}
+    <button type="button" class="ws-menueknopf" data-menueknopf aria-expanded="false" aria-controls="ws-menue"><span aria-hidden="true">☰</span><span class="ws-nur-leser">Menü</span></button>
+    <nav class="ws-menue" id="ws-menue" aria-label="Hauptmenü"><ul>{{#menue}}<li><a href="{{url}}">{{label}}</a></li>{{/menue}}</ul></nav>
+    {{/menueHtml}}
+    {{#kopfknopf.zeigen}}<a class="ws-knopf ws-knopf--klein" href="{{kopfknopf.url}}">{{kopfknopf.text}}</a>{{/kopfknopf.zeigen}}
+  </div>
+</header>

@@ -1,0 +1,14 @@
+<section class="{{{klasseHtml}}} tf-sektion"{{{ankerAttrHtml}}}>
+  <div class="ws-rahmen tf-ueber{{#bildUrl}} tf-ueber--bild{{/bildUrl}}">
+    <div>
+      {{#eyebrow}}<p class="tf-eyebrow">{{eyebrow}}</p>{{/eyebrow}}
+      {{#statement}}<p class="tf-statement">{{statement|zeilen}}</p>{{/statement}}
+      {{#absaetzeHtml}}<div class="tf-fliesstext">{{{absaetzeHtml}}}</div>{{/absaetzeHtml}}
+      <div class="tf-knoepfe">{{knopf|knopf2}}</div>
+    </div>
+    {{#bildUrl}}<figure class="tf-ueber-bild"><img src="{{bildUrl}}" alt="{{bildAlt}}" loading="lazy" decoding="async"></figure>{{/bildUrl}}
+  </div>
+  {{#werte?}}<div class="ws-rahmen"><ol class="tf-liste-nr tf-werte">
+    {{#werte}}<li><span class="tf-nr">{{@nummer|zweistellig}}</span><div><h3>{{titel}}</h3>{{#text}}<p>{{text|zeilen}}</p>{{/text}}</div></li>{{/werte}}
+  </ol></div>{{/werte?}}
+</section>

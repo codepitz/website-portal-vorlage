@@ -1,0 +1,106 @@
+name: Deploy
+
+# Lädt Portal, Generator und Themes per SFTP zum Hoster ({{HOSTER}}).
+#
+# Was der Kunde im Portal pflegt, liegt NUR auf dem Server und wird hier nie
+# überschrieben: Inhalte (privat/daten), Entwürfe, Konten, SMTP-Zugang,
+# Sicherungen, hochgeladene Medien, die erzeugte Webseite und konfig.php.
+# Solche Ordner werden nur beim allerersten Mal angelegt (--only-missing).
+#
+# Einrichten (GitHub › Settings › Secrets and variables › Actions):
+#   Secrets:    SFTP_HOST ({{SFTP_HOST}}), SFTP_BENUTZER, SFTP_PASSWORT
+#   Variablen:  SFTP_PFAD  (optional, Standard „/“ — der Ordner, in dem webseite/, portal/ und privat/ liegen)
+#               SFTP_PORT  (optional, Standard {{SFTP_PORT}})
+# Ohne Secrets läuft der Workflow durch, ohne etwas hochzuladen.
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'portal/**', 'privat/**', 'themes/**', 'webseite/**', '.github/workflows/deploy.yml' ]
+  workflow_dispatch:
+    inputs:
+      themes_aktualisieren:
+        description: 'Themes auf dem Server durch die Fassung aus themes/ ersetzen (Änderungen, die im Portal an diesen Themes gemacht wurden, gehen verloren)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Zugangsdaten prüfen
+        id: pruefen
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+        run: |
+          if [ -z "$SFTP_HOST" ]; then
+            echo "::notice::Keine SFTP-Zugangsdaten hinterlegt — es wird nichts hochgeladen. Secrets SFTP_HOST, SFTP_BENUTZER, SFTP_PASSWORT anlegen."
+            echo "aktiv=nein" >> "$GITHUB_OUTPUT"
+          else
+            echo "aktiv=ja" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: PHP-Dateien prüfen
+        if: steps.pruefen.outputs.aktiv == 'ja'
+        run: |
+          find portal privat -name '*.php' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Themes aus themes/ neu installieren
+        if: steps.pruefen.outputs.aktiv == 'ja' && inputs.themes_aktualisieren
+        run: |
+          for t in themes/*/; do
+            [ -f "$t/theme.json" ] || continue
+            php privat/theme-werkzeug.php installieren "$t" --kennung="$(basename "$t")" || [ $? -eq 2 ]
+          done
+
+      - name: Per SFTP hochladen
+        if: steps.pruefen.outputs.aktiv == 'ja'
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_BENUTZER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASSWORT }}
+          SFTP_PFAD: ${{ vars.SFTP_PFAD }}
+          SFTP_PORT: ${{ vars.SFTP_PORT }}
+          THEMES_ERSETZEN: ${{ inputs.themes_aktualisieren }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          BASIS="${SFTP_PFAD:-/}"; BASIS="${BASIS%/}"
+          PORT="${SFTP_PORT:-{{SFTP_PORT}}}"
+          THEMES=""
+          for t in themes/*/; do
+            [ -f "$t/theme.json" ] || continue
+            id=$(basename "$t")
+            if [ "$THEMES_ERSETZEN" = "true" ]; then
+              THEMES="$THEMES mirror -R --verbose --exclude-glob theme.json privat/design/$id/ $BASIS/privat/design/$id/;"
+            fi
+          done
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:max-retries 2;
+            set net:timeout 30;
+            open -u '$SFTP_USER','$SFTP_PASS' -p $PORT sftp://$SFTP_HOST;
+            echo '--- Portal (Code) — konfig.php bleibt unberührt';
+            mirror -R --verbose --exclude-glob konfig.php --exclude-glob .DS_Store portal/ $BASIS/portal/;
+            echo '--- Generator, Theme-Werkzeug, Versand, Vorlagen';
+            mkdir -p -f $BASIS/privat;
+            put -O $BASIS/privat privat/bauen.php;
+            put -O $BASIS/privat privat/theme.php;
+            put -O $BASIS/privat privat/theme-werkzeug.php;
+            put -O $BASIS/privat privat/versand.php;
+            put -O $BASIS/privat privat/.htaccess;
+            mirror -R --verbose privat/vorlagen/ $BASIS/privat/vorlagen/;
+            echo '--- Beim ersten Mal: Inhalte, Projekt, Designs und die erste Webseite (vorhandene Dateien bleiben)';
+            mirror -R --only-missing --verbose privat/daten/ $BASIS/privat/daten/;
+            mirror -R --only-missing --verbose privat/design/ $BASIS/privat/design/;
+            mirror -R --only-missing --no-recursion --verbose --include-glob projekt.json privat/ $BASIS/privat/;
+            mirror -R --only-missing --verbose webseite/ $BASIS/webseite/;
+            $THEMES
+          "
+          echo "Fertig. Neue Portal- oder Generator-Fassung? Im Portal unter Veröffentlichen einmal „Webseite neu erzeugen“."

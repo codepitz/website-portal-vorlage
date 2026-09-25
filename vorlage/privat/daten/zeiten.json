@@ -1,0 +1,18 @@
+{
+    "zeiten": [
+        {
+            "tage": "Montag – Freitag",
+            "zeit": "09:00 – 18:00 Uhr"
+        },
+        {
+            "tage": "Samstag",
+            "zeit": "nach Vereinbarung"
+        }
+    ],
+    "hinweis": "",
+    "telefonzeiten": [],
+    "telefonHinweis": "",
+    "anfahrt": [
+        "Parkplätze direkt vor dem Haus"
+    ]
+}
